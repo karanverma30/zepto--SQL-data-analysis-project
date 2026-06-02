@@ -50,6 +50,7 @@ Here’s a step-by-step breakdown of what we do in this project:
 ### 1. Database & Table Creation
 We start by creating a SQL table with appropriate data types:
 
+```sql
 CREATE TABLE zepto (
   sku_id SERIAL PRIMARY KEY,
   category VARCHAR(120),
@@ -62,17 +63,20 @@ CREATE TABLE zepto (
   outOfStock BOOLEAN,
   quantity INTEGER
 );
+```
 
 
 ### 2. Data Import
-Loaded CSV using pgAdmin's import feature.
+- Loaded CSV using pgAdmin's import feature.
 
-If you're not able to use the import feature, write this code instead:
+- If you're not able to use the import feature, write this code instead:
 
+```sql
    \copy zepto(category,name,mrp,discountPercent,availableQuantity,
             discountedSellingPrice,weightInGms,outOfStock,quantity)
   FROM 'data/zepto_v2.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
+```
 
 
 ### 3. 🔍 Data Exploration
