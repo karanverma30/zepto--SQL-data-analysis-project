@@ -124,7 +124,7 @@ Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file usi
 
 '''bash
 git clone
-https://github.com/karanverma30/zepto-SQL-data-analysis-project.git
+https://github.com/karanverma30/zepto--SQL-data-analysis-project.git
 cd zepto-SQL-data-analysis-project
 '''
 
